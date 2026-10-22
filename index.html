@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Kivi</title>
+  <meta name="description" content="Kivi — программист из Санкт-Петербурга. Опенсорс-программы, проекты T3KOT и mzvpn на GitHub.">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171a16">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#efeee4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317141d'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23a3d977' font-family='monospace' font-weight='bold'%3Ek%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <main class="desk" id="desk">
+
+    <section class="win" id="w-about" style="--x:36;--y:36" data-title="обо мне">
+      <header class="bar"><span class="bar-name">обо мне</span><button class="x" type="button" aria-label="Закрыть окно">×</button></header>
+      <div class="body about">
+        <h1>Kivi</h1>
+        <p>Привет! Я Kivi, живу в Питере, пишу опенсорс и складываю его на GitHub.</p>
+        <ul class="facts">
+          <li>Санкт-Петербург</li>
+          <li>open source</li>
+          <li>github.com/134rt5yt-svg</li>
+        </ul>
+        <p class="ps"> </p>
+      </div>
+    </section>
+
+    <section class="win" id="w-devices" style="--x:500;--y:36" data-title="мои устройства">
+      <header class="bar"><span class="bar-name">мои устройства</span><button class="x" type="button" aria-label="Закрыть окно">×</button></header>
+      <div class="body">
+        <div class="devs">
+          <figure class="dev" data-say="Sony VAIO VPC-SE (на базе S серии)">
+            <div class="shot"><img src="img/device-sony.png" alt="Sony" loading="lazy" decoding="async"></div>
+            <figcaption>Sony VAIO VPC-SE</figcaption>
+          </figure>
+          <figure class="dev" data-say="CMF Phone 2 Pro, основной телефон">
+            <div class="shot"><img src="img/device-cmf-phone-2-pro-white.png" alt="Белый CMF Phone 2 Pro, вид сзади" loading="lazy" decoding="async"></div>
+            <figcaption>CMF Phone 2 Pro</figcaption>
+          </figure>
+          <figure class="dev" data-say="Samsung Galaxy A8 2018, второй красивый на OneUI 7">
+            <div class="shot"><img src="img/device-samsung-a8-blue.png" alt="Синий Samsung Galaxy A8 2018, вид сзади" loading="lazy" decoding="async"></div>
+            <figcaption>Samsung A8</figcaption>
+          </figure>
+        </div>
+        <p class="hint" id="hint">кликни на устройство</p>
+      </div>
+    </section>
+
+    <section class="win" id="w-social" style="--x:36;--y:350" data-title="контакты">
+      <header class="bar"><span class="bar-name">контакты</span><button class="x" type="button" aria-label="Закрыть окно">×</button></header>
+      <div class="body links">
+        <div class="link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          <div class="t"><b>Telegram</b><span>@kividev</span></div>
+          <div class="btns">
+            <button class="btn" type="button" data-copy="@kividev">копировать</button>
+            <a class="btn" href="https://t.me/kividev" target="_blank" rel="noopener">открыть ↗</a>
+          </div>
+        </div>
+        <div class="link">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <div class="t"><b>GitHub</b><span>134rt5yt-svg</span></div>
+          <div class="btns">
+            <button class="btn" type="button" data-copy="https://github.com/134rt5yt-svg">копировать</button>
+            <a class="btn" href="https://github.com/134rt5yt-svg" target="_blank" rel="noopener">открыть ↗</a>
+          </div>
+        </div>
+        <div class="link">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>
+          <div class="t"><b>VK</b><span>kivihah</span></div>
+          <div class="btns">
+              <button class="btn" type="button" data-copy="https://vk.ru/kivihah">копировать</button>
+            <a class="btn" href="https://vk.ru/kivihah" target="_blank" rel="noopener">открыть ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="win" id="w-proj" style="--x:500;--y:350" data-title="проекты">
+      <header class="bar"><span class="bar-name">проекты</span><button class="x" type="button" aria-label="Закрыть окно">×</button></header>
+      <div class="body proj">
+        <a class="item" href="https://github.com/134rt5yt-svg/T3KOT" target="_blank" rel="noopener">
+          <h3>T3KOT</h3><p>3D-платформер от первого лица: подъём по гигантским платформам сквозь туман.</p>
+        </a>
+        <a class="item" href="https://github.com/134rt5yt-svg/mzvpn" target="_blank" rel="noopener">
+          <h3>mzvpn</h3><p>Опенсорс-проект на GitHub.</p>
+        </a>
+        <div class="row" style="margin-top:10px"><a class="btn" href="https://github.com/134rt5yt-svg" target="_blank" rel="noopener">все проекты ↗</a></div>
+      </div>
+    </section>
+
+    <section class="win" id="w-music" style="--x:1000;--y:340" data-title="музыка">
+      <div class="coverbg" id="coverbg" aria-hidden="true"></div>
+      <header class="bar"><span class="bar-name">музыка</span><button class="x" type="button" aria-label="Закрыть окно">×</button></header>
+      <div class="body music">
+        <ul class="tracks" id="tracks"></ul>
+        <audio id="player" controls preload="none"></audio>
+        <p class="hint">Вот моё любимое</p>
+      </div>
+    </section>
+
+    <section class="win term" id="w-term" style="--x:1000;--y:36" data-title="терминал">
+      <header class="bar"><span class="bar-name">терминал</span><button class="x" type="button" aria-label="Закрыть окно">×</button></header>
+      <div class="body" id="termBody">
+        <div id="out"></div>
+        <form id="termForm" autocomplete="off">
+          <span class="pr">user@pidora:~$</span><input id="cmd" type="text" spellcheck="false" autocapitalize="off" aria-label="Команда">
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <div class="resume" id="resume" hidden role="button" tabindex="0" aria-label="Вернуть окна">
+    <p>кликни в любом месте, чтобы вернуть окна</p>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
