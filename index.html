@@ -9,36 +9,158 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#efeee4">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317141d'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23a3d977' font-family='monospace' font-weight='bold'%3Ek%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="miui-mode.css">
+  <link rel="stylesheet" href="material3-expressive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "https://esm.run/@material/web@2.5.0/"
+      }
+    }
+  </script>
+  <script type="module">
+    import '@material/web/button/filled-button.js';
+    import '@material/web/button/filled-tonal-button.js';
+    import '@material/web/button/outlined-button.js';
+    import '@material/web/button/text-button.js';
+    import '@material/web/chips/chip-set.js';
+    import '@material/web/chips/assist-chip.js';
+    import '@material/web/divider/divider.js';
+    import '@material/web/textfield/outlined-text-field.js';
+  </script>
   <script src="script.js" defer></script>
-  <script src="miui-mode.js" defer></script>
+  <script src="material3-expressive.js" defer></script>
 </head>
 <body>
   <canvas id="bg" aria-hidden="true"></canvas>
 
-  <header class="miui-header">
-    <div class="miui-statusline">
-      <a class="miui-mark" href="#w-about" aria-label="Kivi, главная">K</a>
-      <span class="miui-status-label">Kivi / портфолио</span>
-      <span class="miui-mode-tag">MIUI 14 STYLE</span>
-    </div>
-    <div class="miui-hero">
-      <div>
-        <p class="miui-kicker">OPEN SOURCE · PERSONAL PAGE</p>
-        <h1>Kivi</h1>
-        <p class="miui-subtitle">Программист из Санкт-Петербурга. Проекты, устройства и немного музыки.</p>
+  <main class="m3-app" id="materialView" aria-label="Портфолио Kivi">
+    <div class="m3-layout">
+      <header class="m3-header">
+        <a class="m3-brand" href="#m3-top" aria-label="Kivi, наверх">
+          <span class="m3-brand-mark">K</span>
+          <span class="m3-brand-copy"><span class="m3-overline">PERSONAL PORTFOLIO</span><strong>Kivi</strong></span>
+        </a>
+        <md-filled-button href="https://github.com/134rt5yt-svg" target="_blank" rel="noopener">GitHub</md-filled-button>
+      </header>
+
+      <section class="m3-hero" id="m3-top">
+        <div class="m3-hero-copy">
+          <p class="m3-overline">OPEN SOURCE · PROJECTS</p>
+          <h1>Привет, я Kivi.</h1>
+          <p>Делаю опенсорс-проекты, экспериментирую с интерфейсами и разрабатываю небольшие игры и программы.</p>
+          <div class="m3-hero-actions">
+            <md-filled-button href="#m3-projects">Мои проекты</md-filled-button>
+            <md-outlined-button href="https://github.com/134rt5yt-svg" target="_blank" rel="noopener">Профиль GitHub</md-outlined-button>
+          </div>
+        </div>
+        <div class="m3-hero-aside" aria-label="Информация о профиле">
+          <div class="m3-monogram">K</div>
+          <div class="m3-hero-stat"><span>Локация</span><strong>Санкт-Петербург</strong></div>
+          <md-divider></md-divider>
+          <div class="m3-hero-stat"><span>Основной фокус</span><strong>Open source</strong></div>
+        </div>
+      </section>
+
+      <nav class="m3-nav" aria-label="Разделы портфолио">
+        <md-chip-set>
+          <md-assist-chip label="Обо мне" href="#m3-about"></md-assist-chip>
+          <md-assist-chip label="Устройства" href="#m3-devices"></md-assist-chip>
+          <md-assist-chip label="Проекты" href="#m3-projects"></md-assist-chip>
+          <md-assist-chip label="Контакты" href="#m3-contacts"></md-assist-chip>
+          <md-assist-chip label="Музыка" href="#m3-music"></md-assist-chip>
+          <md-assist-chip label="Терминал" href="#m3-terminal"></md-assist-chip>
+        </md-chip-set>
+      </nav>
+
+      <div class="m3-grid">
+        <section class="m3-surface m3-about" id="m3-about">
+          <md-divider></md-divider>
+          <p class="m3-overline">01 · ABOUT</p>
+          <h2>Немного обо мне</h2>
+          <p>Привет! Я Kivi, живу в Питере, пишу опенсорс и складываю проекты на GitHub.</p>
+          <div class="m3-facts">
+            <span>Санкт-Петербург</span>
+            <span>Open source</span>
+            <span>Разработка и игры</span>
+          </div>
+        </section>
+
+        <section class="m3-surface m3-devices" id="m3-devices">
+          <p class="m3-overline">02 · DEVICES</p>
+          <h2>Мои устройства</h2>
+          <div class="m3-device-grid">
+            <figure class="m3-device">
+              <div class="m3-device-image"><img src="img/device-sony.png" alt="Sony VAIO VPC-SE" loading="lazy" decoding="async"></div>
+              <figcaption>Sony VAIO VPC-SE</figcaption>
+            </figure>
+            <figure class="m3-device">
+              <div class="m3-device-image"><img src="img/device-cmf-phone-2-pro-white.png" alt="Белый CMF Phone 2 Pro, вид сзади" loading="lazy" decoding="async"></div>
+              <figcaption>CMF Phone 2 Pro</figcaption>
+            </figure>
+            <figure class="m3-device">
+              <div class="m3-device-image"><img src="img/device-samsung-a8-blue.png" alt="Синий Samsung Galaxy A8 2018, вид сзади" loading="lazy" decoding="async"></div>
+              <figcaption>Samsung A8</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="m3-surface m3-projects" id="m3-projects">
+          <p class="m3-overline">03 · PROJECTS</p>
+          <h2>Проекты</h2>
+          <article class="m3-project">
+            <div><h3>T3KOT</h3><p>3D-платформер от первого лица: подъём по гигантским платформам сквозь туман.</p></div>
+            <md-outlined-button href="https://github.com/134rt5yt-svg/T3KOT" target="_blank" rel="noopener">Открыть репозиторий</md-outlined-button>
+          </article>
+          <md-divider></md-divider>
+          <article class="m3-project">
+            <div><h3>mzvpn</h3><p>Опенсорс-проект на Rust, форк FoxyVPN для ПК.</p></div>
+            <md-outlined-button href="https://github.com/134rt5yt-svg/mzvpn" target="_blank" rel="noopener">Открыть репозиторий</md-outlined-button>
+          </article>
+          <md-divider></md-divider>
+          <div class="m3-actions-end"><md-filled-tonal-button href="https://github.com/134rt5yt-svg" target="_blank" rel="noopener">Все проекты</md-filled-tonal-button></div>
+        </section>
+
+        <section class="m3-surface m3-contacts" id="m3-contacts">
+          <p class="m3-overline">04 · CONTACTS</p>
+          <h2>Контакты</h2>
+          <div class="m3-contact-row"><div><strong>Telegram</strong><span>@kividev</span></div><md-outlined-button href="https://t.me/kividev" target="_blank" rel="noopener">Открыть</md-outlined-button></div>
+          <md-divider></md-divider>
+          <div class="m3-contact-row"><div><strong>GitHub</strong><span>134rt5yt-svg</span></div><md-outlined-button href="https://github.com/134rt5yt-svg" target="_blank" rel="noopener">Открыть</md-outlined-button></div>
+          <md-divider></md-divider>
+          <div class="m3-contact-row"><div><strong>VK</strong><span>kivihah</span></div><md-outlined-button href="https://vk.ru/kivihah" target="_blank" rel="noopener">Открыть</md-outlined-button></div>
+        </section>
+
+        <section class="m3-surface m3-music" id="m3-music">
+          <p class="m3-overline">05 · MUSIC</p>
+          <h2>Музыка</h2>
+          <p>Мои любимые треки.</p>
+          <div class="m3-track-actions">
+            <md-outlined-button data-m3-track="music/effycore.mp3">effycore</md-outlined-button>
+            <md-outlined-button data-m3-track="music/ski_slopes.mp3">ski slopes</md-outlined-button>
+            <md-outlined-button data-m3-track="music/Dog_Tag_freestyle.mp3">Dog Tag freestyle</md-outlined-button>
+          </div>
+          <audio id="m3-player" controls preload="none"></audio>
+          <p class="m3-note" id="m3-music-status" aria-live="polite">Выбери трек для воспроизведения.</p>
+        </section>
+
+        <section class="m3-surface m3-terminal" id="m3-terminal">
+          <p class="m3-overline">06 · TERMINAL</p>
+          <h2>Терминал</h2>
+          <p>Небольшой интерфейс для команд портфолио. В исходном оконном режиме остаётся полный терминал.</p>
+          <div class="m3-terminal-controls">
+            <md-outlined-text-field id="m3-command" label="Команда" placeholder="help" autocomplete="off"></md-outlined-text-field>
+            <md-filled-button id="m3-run-command">Выполнить</md-filled-button>
+          </div>
+          <pre class="m3-terminal-output" id="m3-output" aria-live="polite">Напиши help.</pre>
+        </section>
       </div>
-      <a class="miui-github" href="https://github.com/134rt5yt-svg" target="_blank" rel="noopener">Мой GitHub <span aria-hidden="true">↗</span></a>
+
+      <footer class="m3-footer"><md-divider></md-divider><span>Kivi · портфолио и open source</span><md-text-button href="#m3-top">Наверх ↑</md-text-button></footer>
     </div>
-    <nav class="miui-nav" aria-label="Навигация по портфолио">
-      <a href="#w-about">Обо мне</a>
-      <a href="#w-devices">Устройства</a>
-      <a href="#w-social">Контакты</a>
-      <a href="#w-proj">Проекты</a>
-      <a href="#w-music">Музыка</a>
-      <a href="#w-term">Терминал</a>
-    </nav>
-  </header>
+  </main>
+
+
 
   <main class="desk" id="desk">
 
@@ -146,9 +268,7 @@
     <p>кликни в любом месте, чтобы вернуть окна</p>
   </div>
 
-  <button class="mode-toggle" id="modeToggle" type="button" aria-pressed="false" aria-label="Включить режим MIUI 14">
-    <span>MIUI 14</span>
-  </button>
+  <md-filled-tonal-button class="mode-toggle" id="modeToggle" type="button" aria-pressed="false">M3 Expressive</md-filled-tonal-button>
   <div class="toast" id="toast" role="status"></div>
 </body>
 </html>
