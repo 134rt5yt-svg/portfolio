@@ -9,10 +9,36 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#efeee4">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317141d'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23a3d977' font-family='monospace' font-weight='bold'%3Ek%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="miui-mode.css">
   <script src="script.js" defer></script>
+  <script src="miui-mode.js" defer></script>
 </head>
 <body>
   <canvas id="bg" aria-hidden="true"></canvas>
+
+  <header class="miui-header">
+    <div class="miui-statusline">
+      <a class="miui-mark" href="#w-about" aria-label="Kivi, главная">K</a>
+      <span class="miui-status-label">Kivi / портфолио</span>
+      <span class="miui-mode-tag">MIUI 14 STYLE</span>
+    </div>
+    <div class="miui-hero">
+      <div>
+        <p class="miui-kicker">OPEN SOURCE · PERSONAL PAGE</p>
+        <h1>Kivi</h1>
+        <p class="miui-subtitle">Программист из Санкт-Петербурга. Проекты, устройства и немного музыки.</p>
+      </div>
+      <a class="miui-github" href="https://github.com/134rt5yt-svg" target="_blank" rel="noopener">Мой GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+    <nav class="miui-nav" aria-label="Навигация по портфолио">
+      <a href="#w-about">Обо мне</a>
+      <a href="#w-devices">Устройства</a>
+      <a href="#w-social">Контакты</a>
+      <a href="#w-proj">Проекты</a>
+      <a href="#w-music">Музыка</a>
+      <a href="#w-term">Терминал</a>
+    </nav>
+  </header>
 
   <main class="desk" id="desk">
 
@@ -74,7 +100,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>
           <div class="t"><b>VK</b><span>kivihah</span></div>
           <div class="btns">
-              <button class="btn" type="button" data-copy="https://vk.ru/kivihah">копировать</button>
+            <button class="btn" type="button" data-copy="https://vk.ru/kivihah">копировать</button>
             <a class="btn" href="https://vk.ru/kivihah" target="_blank" rel="noopener">открыть ↗</a>
           </div>
         </div>
@@ -116,11 +142,13 @@
 
   </main>
 
-
   <div class="resume" id="resume" hidden role="button" tabindex="0" aria-label="Вернуть окна">
     <p>кликни в любом месте, чтобы вернуть окна</p>
   </div>
 
+  <button class="mode-toggle" id="modeToggle" type="button" aria-pressed="false" aria-label="Включить режим MIUI 14">
+    <span>MIUI 14</span>
+  </button>
   <div class="toast" id="toast" role="status"></div>
 </body>
 </html>
