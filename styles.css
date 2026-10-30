@@ -7,7 +7,7 @@
   --y1: #ff6a2d;
   --y2: #ff4b1f;
   --y3: #c92e0a;
-  --font: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color-scheme: dark;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -580,11 +580,102 @@ svg { display: block; }
   }
 }
 
-/* Аватарка GitHub вместо оранжевого кружка */
-.prof .mini-av { position: relative; overflow: hidden; background: #171717; box-shadow: none; }
-.prof .mini-av img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
-.prof .mini-av span { color: var(--y2); font-size: 40px; font-weight: 800; }
 
-/* Вкладка «Стек»: монограммы вместо обложек */
-.trk .art.mono { display: grid; place-items: center; background: #171717; color: var(--y2); font-size: 18px; font-weight: 800; letter-spacing: -0.04em; }
-#view-stack .trk .t span { white-space: normal; line-height: 1.35; }
+body {
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.hdr h1 {
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.eyebrow {
+  font-weight: 600;
+  letter-spacing: 0.09em;
+}
+
+.intro-title {
+  font-size: clamp(54px, 11.5vw, 68px);
+  font-weight: 700;
+  line-height: 0.99;
+  letter-spacing: -0.045em;
+}
+
+.section-head h2,
+.stack h2 {
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.home-projects .trk {
+  border-radius: 8px;
+}
+
+.home-projects .trk .art {
+  border-radius: 6px;
+}
+
+.home-projects .trk .t b {
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+.card .art {
+  border-radius: 8px;
+}
+
+.card b {
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.prof b {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.intro-copy,
+.home-projects .trk .t span,
+.card span {
+  text-wrap: pretty;
+}
+
+@media (min-width: 561px) {
+  .intro-title {
+    font-size: clamp(64px, 8.5vw, 76px);
+  }
+}
+
+@media (min-width: 900px) {
+  .intro-title {
+    font-size: clamp(68px, 6.6vw, 96px);
+    line-height: 0.98;
+  }
+
+  .home-projects .trk {
+    border-radius: 8px;
+  }
+
+  .home-projects .trk .art {
+    border-radius: 8px;
+  }
+
+  .nav a {
+    border-radius: 10px;
+  }
+
+  .stack-list span {
+    border-radius: 4px;
+  }
+
+  .card .art {
+    border-radius: 8px;
+  }
+}

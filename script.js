@@ -12,11 +12,10 @@
     el.innerHTML = cover(el.getAttribute('data-cover'));
   });
 
-  var titles = { home: 'Портфолио', stack: 'Стек', links: 'GitHub' };
+  var titles = { home: 'Портфолио', projects: 'Проекты', links: 'GitHub' };
   var views = Object.keys(titles);
   function route() {
     var h = location.hash.replace('#', '');
-    if (h === 'projects') h = 'stack'; // старые ссылки на #projects ведут на новую вкладку
     if (views.indexOf(h) < 0) h = 'home';
     views.forEach(function (v) { document.getElementById('view-' + v).hidden = v !== h; });
     document.getElementById('ttl-text').textContent = titles[h];
