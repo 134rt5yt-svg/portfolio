@@ -579,3 +579,12 @@ svg { display: block; }
     padding: 16px;
   }
 }
+
+/* Аватарка GitHub вместо оранжевого кружка */
+.prof .mini-av { position: relative; overflow: hidden; background: #171717; box-shadow: none; }
+.prof .mini-av img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
+.prof .mini-av span { color: var(--y2); font-size: 40px; font-weight: 800; }
+
+/* Вкладка «Стек»: монограммы вместо обложек */
+.trk .art.mono { display: grid; place-items: center; background: #171717; color: var(--y2); font-size: 18px; font-weight: 800; letter-spacing: -0.04em; }
+#view-stack .trk .t span { white-space: normal; line-height: 1.35; }
